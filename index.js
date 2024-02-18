@@ -90,7 +90,7 @@ function init() {
     inquirer.prompt(questions)
         .then((answers) => {
             // write README
-            writeToFile("README.md", answers);
+            writeToFile("./output/README.md", answers);
             //  console.log(answers)
         })
         .catch((error) => {
