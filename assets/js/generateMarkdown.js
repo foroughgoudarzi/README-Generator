@@ -1,10 +1,13 @@
+// Includes badge.js file
 const fb = require("./badge");
 
-// function to generate markdown for README
-let generateMarkdown = function generateMarkdown(data) {
+// Function to generate markdown for README
+function generateMarkdown(data) {
 
-  const badge = fb.findBadge(data.license);
+  // Extracts the license badge from the map
+  const badge = fb.licenseBadge.get(data.license);
 
+  // Creates the "Table of Contents" section of the README 
   const tableOfContents = `## Table of Contents\n\n` +
     `[Description](#description)\n\n` +
     `[Usage](#usage)\n\n` +
@@ -14,6 +17,7 @@ let generateMarkdown = function generateMarkdown(data) {
     `[License](#license)\n\n` +
     `[Question](#question)\n\n`;
 
+  // Creates the contents of the README  
   const fileContent = `# ${data.title}\n\n` +
     `${badge}\n\n` +
     `${data.contents ? tableOfContents : ""}` +
@@ -35,4 +39,5 @@ let generateMarkdown = function generateMarkdown(data) {
    return fileContent;
 }
 
+// Exports generateMarkdown method
 exports.generateMarkdown = generateMarkdown;

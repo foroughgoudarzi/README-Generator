@@ -2,7 +2,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./assets/js/generateMarkdown");
 
-// array of questions for user
+// Array of questions for user
 const questions = [
     {
         type: 'input',
@@ -74,7 +74,7 @@ const questions = [
 
 ];
 
-// function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
 
     const fileContent = generateMarkdown.generateMarkdown(data);
@@ -84,14 +84,14 @@ function writeToFile(fileName, data) {
     });
 }
 
-// function to initialize program
+// Function to initialize program
 function init() {
 
     inquirer.prompt(questions)
         .then((answers) => {
-            // write README
+          
+            // Writes README in the output folder
             writeToFile("./output/README.md", answers);
-            //  console.log(answers)
         })
         .catch((error) => {
             if (error.isTtyError) {
@@ -103,5 +103,5 @@ function init() {
 
 }
 
-// function call to initialize program
+// Function call to initialize program
 init();
