@@ -7,24 +7,30 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: "What's the project title?",
+        message: "What is the title of the project?",
+        validate(text) {
+            if (text.length != 0) {
+                return true;
+            }
+            return 'Project title is required:';
+        },
     },
     {
         type: 'input',
         name: 'description',
-        message: "Enter the project descriptin:",
+        message: "Please provide a brief project description:",
 
     },
     {
         type: 'input',
         name: 'usage',
-        message: "Explain how the application works:",
+        message: "How does the application work?",
 
     },
     {
         type: 'confirm',
         name: 'contents',
-        message: "Would you like to add a table of contents?",
+        message: "Do you wish to include a table of contents?",
         default() {
             return 'Y';
         },
@@ -33,45 +39,45 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: "Explain the installation process:",
+        message: "Please describe the installation process:",
 
     },
     {
         type: 'input',
         name: 'contributing',
-        message: "Enter the contributing parties and/or resources:",
+        message: "Who are the contributors and/or resources used?",
 
     },
     {
         type: 'input',
         name: 'tests',
-        message: "Explain how to run the tests:",
+        message: "How can the tests be executed?",
 
     },
     {
         type: 'list',
         name: 'license',
-        message: "What license the application is coverd under?",
+        message: "Under which license is the application covered?",
         choices: ["MIT License", "GNU GPL v3 License", "GNU GPL v2 License", "Apache License 2.0", "BSD-2 License", "BSD-3 License", "Boost Software License"],
 
     },
     {
         type: 'input',
+        name: 'username',
+        message: "What is the GitHub username hosting this project?",
+    },
+    {
+        type: 'input',
         name: 'email',
-        message: "Enter an email address so the users can contact if there is any question:",
+        message: "Please provide an email address for user inquiries:",
         validate(text) {
-            if (text.includes("@", 1) && text.indexOf("@") < text.length - 1) {
+            if (text.length == 0 || (text.includes("@", 1) && text.indexOf("@") < text.length - 1)) {
                 return true;
             }
             return 'Enter a valid email:';
         },
     },
-    {
-        type: 'input',
-        name: 'instruction',
-        message: "Enter any additional information for contacting this email address:",
-    },
-
+   
 ];
 
 // Function to write README file
@@ -89,7 +95,7 @@ function init() {
 
     inquirer.prompt(questions)
         .then((answers) => {
-          
+
             // Writes README in the output folder
             writeToFile("./output/README.md", answers);
         })

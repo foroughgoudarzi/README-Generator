@@ -8,7 +8,7 @@ const bsd3 = "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blu
 const boost = "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
 
 // Declares and defines a map that maps each license name to its badge
-const licenseBadge =new Map();  
+const licenseBadge = new Map();
 licenseBadge.set("MIT License", mit);
 licenseBadge.set("GNU GPL v3 License", gnuGpl3);
 licenseBadge.set("GNU GPL v2 License", gnuGpl2);
