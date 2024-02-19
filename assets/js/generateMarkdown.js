@@ -9,13 +9,12 @@ function generateMarkdown(data) {
 
   // Creates the "Table of Contents" section of README 
   const tableOfContents = `## Table of Contents\n\n` +
-    `[Description](#description)\n\n` +
-    `[Usage](#usage)\n\n` +
     `[Installation](#installation)\n\n` +
+    `[Usage](#usage)\n\n` +
+    `[License](#license)\n\n` +
     `[Contributing](#contributing)\n\n` +
     `[Tests](#tests)\n\n` +
-    `[License](#license)\n\n` +
-    `[Question](#question)\n\n`;
+    `[Questions](#questions)\n\n`;
 
   // Creates the content for Question section of README
   var questionSection = "";
@@ -29,20 +28,20 @@ function generateMarkdown(data) {
   // Creates the contents of the README  
   const fileContent = `# ${data.title}\n\n` +
     `${badge}\n\n` +
-    `${data.contents ? tableOfContents : ""}` +
     `## Description\n\n` +
     `${data.description ? data.description : "N/A"}\n\n` +
-    `## Usage\n\n` +
-    `${data.usage ? data.usage : "N/A"}\n\n` +
+    `${data.contents ? tableOfContents : ""}` +
     `## Installation\n\n` +
     `${data.installation ? data.installation : "N/A"}\n\n` +
+    `## Usage\n\n` +
+    `${data.usage ? data.usage : "N/A"}\n\n` +
+    `## License\n\n` +
+    `This application is covered under the ${data.license}.\n\n` +
     `## Contributing\n\n` +
     `${data.contributing ? data.contributing : "N/A"}\n\n` +
     `## Tests\n\n` +
     `${data.tests ? data.tests : "N/A"}\n\n` +
-    `## License\n\n` +
-    `This application is covered under the ${data.license}.\n\n` +
-    `## Question\n\n` +
+    `## Questions\n\n` +
     `${questionSection.length > 0 ? questionSection : "N/A"}`;
 
   return fileContent;

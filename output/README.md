@@ -1,49 +1,47 @@
-# README Generator Application
+# README Generator Demo
 
-[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+## Description
+
+It a command-line application that accepts user input and then generates a professional README file for a project.
 
 ## Table of Contents
 
-[Description](#description)
+[Installation](#installation)
 
 [Usage](#usage)
 
-[Installation](#installation)
+[License](#license)
 
 [Contributing](#contributing)
 
 [Tests](#tests)
 
-[License](#license)
-
-[Question](#question)
-
-## Description
-
-It generates a professional README.md file for a project.
-
-## Usage
-
-By running "Node index.js" in the directory of application.
+[Questions](#questions)
 
 ## Installation
 
 N/A
 
-## Contributing
+## Usage
 
-Forough is the sole contributor of application.
-
-## Tests
-
-Currently, there is no test.
+By running "node index.js" from command line.
 
 ## License
 
-This application is covered under the GNU GPL v2 License.
+This application is covered under the Apache License 2.0.
 
-## Question
+## Contributing
 
-The application can be accessed at [https://github.com/foroughgoudarzi/](https://github.com/foroughgoudarzi/).
+Forough is the developer of this application.
+
+## Tests
+
+Currently, there is no test. 
+
+## Questions
+
+The application can be accessed at [https://github.com/foroughgodarzi/](https://github.com/foroughgodarzi/).
 
 For any inquiries, please reach out to foroughg@yahoo.com. We strive to respond to all queries within five business days.

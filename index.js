@@ -23,6 +23,12 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'installation',
+        message: "Please describe the installation process:",
+
+    },
+    {
+        type: 'input',
         name: 'usage',
         message: "How does the application work?",
 
@@ -34,12 +40,12 @@ const questions = [
         default() {
             return 'Y';
         },
-
     },
     {
-        type: 'input',
-        name: 'installation',
-        message: "Please describe the installation process:",
+        type: 'list',
+        name: 'license',
+        message: "Under which license is the application covered?",
+        choices: ["MIT License", "GNU GPL v3 License", "GNU GPL v2 License", "Apache License 2.0", "BSD-2 License", "BSD-3 License", "Boost Software License"],
 
     },
     {
@@ -52,13 +58,6 @@ const questions = [
         type: 'input',
         name: 'tests',
         message: "How can the tests be executed?",
-
-    },
-    {
-        type: 'list',
-        name: 'license',
-        message: "Under which license is the application covered?",
-        choices: ["MIT License", "GNU GPL v3 License", "GNU GPL v2 License", "Apache License 2.0", "BSD-2 License", "BSD-3 License", "Boost Software License"],
 
     },
     {
@@ -105,7 +104,6 @@ function init() {
                 console.log("Something went wrong!");
             }
         });
-
 }
 
 // Function call to initialize program

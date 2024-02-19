@@ -13,6 +13,10 @@ README-Generator is a command-line application that dynamically generates a prof
 * Tests
 * Questions
 
+## Installation
+
+N/A
+
 ## Usage
 
 To use the application, execute the following command within the application's directory:
@@ -25,9 +29,9 @@ After responding to the prompted questions, a README file is automatically gener
 
 For a detailed demonstration of the application's functionality, please refer to this video: [walkthrough video](./assets/images/walkthrough.mp4).
 
-## Installation
+## License
 
-N/A
+Please see the [License](./LICENSE).
 
 ## Credit
 
@@ -36,7 +40,3 @@ The following resources were used:
 * [inquirer](https://www.npmjs.com/package/inquirer)
 * [W3 Schools](https://www.w3schools.com/)
 * [Node.js Documentation](https://nodejs.org/en)
-
-## License
-
-Please see the [License](./LICENSE).
