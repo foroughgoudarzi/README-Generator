@@ -77,7 +77,6 @@ const questions = [
             return 'Enter a valid email:';
         },
     },
-   
 ];
 
 // Function to write README file
@@ -86,7 +85,7 @@ function writeToFile(fileName, data) {
     const fileContent = generateMarkdown.generateMarkdown(data);
 
     fs.writeFile(fileName, fileContent, (err) => {
-        err ? console.error(err) : console.log('File created!');
+        err ? console.error(err) : console.log('File created in the ./output directory!');
     });
 }
 
