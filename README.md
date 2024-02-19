@@ -11,7 +11,7 @@ README-Generator is a command-line application that dynamically generates a prof
 * License: A list of options is provided where the user can choose one. A badge for that license is added near the top of the README, and a notice is included in the License section explaining which license the application is covered under.
 * Contributing
 * Tests
-* Questions
+* Questions: If a user enter their GitHub username, a link to their GitHub profile is added to this section. In addition, When a user enters their email address, it's added to this section of the README, with instructions on how to reach them with additional questions.
 
 ## Installation
 

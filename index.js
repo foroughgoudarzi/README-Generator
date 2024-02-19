@@ -1,3 +1,4 @@
+// Includes necessary files
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./assets/js/generateMarkdown");
